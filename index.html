@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Peaceful Space for Vanshikha 🐼</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&family=Quicksand:wght@300;500&display=swap');
+
+        :root {
+            --bamboo-dark: #1e272e;
+            --bamboo-light: #2d6a4f;
+            --accent-gold: #d4af37;
+            --soft-white: #f1f2f6;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* New "Midnight Bamboo" Gradient */
+            background: radial-gradient(circle at top right, #2d6a4f, #1e272e 60%);
+            background-attachment: fixed;
+            font-family: 'Quicksand', sans-serif;
+            color: var(--soft-white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 90%;
+            text-align: center;
+            padding: 50px 20px;
+            z-index: 2;
+        }
+
+        h1 { 
+            font-family: 'Great Vibes', cursive; 
+            font-size: 4rem; 
+            margin-bottom: 5px; 
+            color: var(--accent-gold);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* The Breathing Glow Tool */
+        .breathe-container {
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .breathe-circle {
+            width: 160px;
+            height: 160px;
+            background: rgba(129, 199, 132, 0.15);
+            border: 2px solid rgba(129, 199, 132, 0.4);
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(129, 199, 132, 0.2);
+            animation: breatheAnimation 8s infinite ease-in-out;
+        }
+
+        @keyframes breatheAnimation {
+            0%, 100% { transform: scale(0.85); box-shadow: 0 0 10px rgba(129, 199, 132, 0.1); }
+            50% { transform: scale(1.2); box-shadow: 0 0 50px rgba(129, 199, 132, 0.5); }
+        }
+
+        /* Elegant Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .squishy-panda {
+            font-size: 90px;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+            transition: transform 0.1s;
+            user-select: none;
+        }
+
+        .squishy-panda:active { transform: scale(0.7); }
+
+        textarea {
+            width: 100%;
+            height: 90px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            color: white;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Poppins', sans-serif;
+            resize: none;
+            outline: none;
+        }
+
+        .btn-action {
+            background: linear-gradient(45deg, #2d6a4f, #40916c);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 106, 79, 0.4);
+        }
+
+        .btn-hug { background: linear-gradient(45deg, #6c5ce7, #a29bfe); }
+        .btn-burn { background: linear-gradient(45deg, #ff7675, #fab1a0); }
+
+        .floater {
+            position: fixed;
+            bottom: -50px;
+            pointer-events: none;
+            z-index: 10;
+            animation: floatUp 4s linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+
+        .burn-effect { animation: burnAway 0.8s forwards; }
+        @keyframes burnAway { 
+            0% { opacity: 1; transform: scale(1); filter: brightness(1.5); }
+            100% { opacity: 0; transform: scale(0.2) rotate(10deg); filter: grayscale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>For Vanshikha</h1>
+        <p style="opacity: 0.8; font-weight: 300;">A quiet corner to recharge your spirit. 🎋</p>
+
+        <div class="breathe-container">
+            <div class="breathe-circle">
+                <span style="font-size: 0.8rem; letter-spacing: 1px;">BREATHE</span>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="squishy-panda" onclick="squish()">🐼</div>
+            <p style="font-size: 0.9rem; margin-top: 10px;"><b>Poke the Panda</b><br>He doesn't mind. Give him all your stress!</p>
+        </div>
+
+        <div style="margin: 30px 0;">
+            <button class="btn-action btn-hug" onclick="sendHug()">I need a Panda Hug 🫂</button>
+        </div>
+
+        <div class="glass-card" style="background: rgba(0,0,0,0.2);">
+            <h3 style="margin: 0; color: var(--accent-gold);">The Delete Box 🗑️</h3>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Write what’s bothering you. Watch it disappear into the night.</p>
+            <textarea id="ventInput" placeholder="Right now, I'm feeling..."></textarea>
+            <button class="btn-action btn-burn" onclick="burnStress()">Erase from Reality ✨</button>
+        </div>
+
+        <div class="glass-card">
+            <div id="quoteDisplay" style="min-height: 40px; font-style: italic; margin-bottom: 15px;">"It's okay to take a break. The world will wait for you."</div>
+            <button class="btn-action" onclick="newQuote()">A Reason to Smile 🐾</button>
+        </div>
+
+        <p style="font-size: 0.75rem; opacity: 0.5; margin-top: 50px;">
+            Be kind to yourself today. You are doing a great job. 🤍
+        </p>
+    </div>
+
+    <script>
+        function squish() {
+            const p = document.querySelector('.squishy-panda');
+            p.style.transform = 'scale(0.65)';
+            setTimeout(() => p.style.transform = 'scale(1)', 100);
+        }
+
+        function sendHug() {
+            const icons = ['🫂', '💖', '🐼', '✨', '🐾', '🍃'];
+            for(let i=0; i<20; i++) {
+                setTimeout(() => {
+                    const f = document.createElement('div');
+                    f.className = 'floater';
+                    f.innerText = icons[Math.floor(Math.random()*icons.length)];
+                    f.style.left = Math.random()*100 + 'vw';
+                    f.style.fontSize = (Math.random()*20 + 20) + 'px';
+                    document.body.appendChild(f);
+                    setTimeout(() => f.remove(), 4000);
+                }, i*120);
+            }
+        }
+
+        function burnStress() {
+            const input = document.getElementById('ventInput');
+            if(input.value.trim()==="") return;
+            input.classList.add('burn-effect');
+            setTimeout(() => { 
+                input.value = ""; 
+                input.classList.remove('burn-effect'); 
+            }, 800);
+        }
+
+        const quotes = [
+            "You are more than the sum of your productivity. 🌸",
+            "A panda doesn't rush, yet everything gets done. 🎋",
+            "Sending you a warm cup of peace and a quiet mind. 🍵",
+            "Your best is enough, even on days when your 'best' is just getting through. 🏆",
+            "Close your eyes for 30 seconds. You are safe. You are cared for. 🤍",
+            "Study because you're curious, not because you're scared. You've got this! 💡"
+        ];
+
+        function newQuote() {
+            const display = document.getElementById('quoteDisplay');
+            display.style.opacity = 0;
+            setTimeout(() => {
+                display.innerText = quotes[Math.floor(Math.random()*quotes.length)];
+                display.style.opacity = 1;
+            }, 300);
+        }
+    </script>
+</body>
+</html>
